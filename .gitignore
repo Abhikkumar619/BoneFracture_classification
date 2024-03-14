@@ -160,4 +160,5 @@ cython_debug/
 #.idea/
 
 bone_env/
+artifacts/
 
