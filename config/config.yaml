@@ -1,0 +1,8 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/dataingestion
+  data_url: "https://drive.google.com/file/d/1ey81m--C6Gm8cn8bkUExg2h3e29Vj_ro/view?usp=sharing"
+  data_zip_path: artifacts/dataingestion/bone_fracture.zip
+  unzip_dir: artifacts/dataingestion
+
