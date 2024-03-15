@@ -1,1 +1,8 @@
-key: value
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3]   # size of images, RGB color.
+BATCH_SIZE: 16
+INCLUDE_TOP: False  # WE don't want Fully connected layer of pertrain model
+EPOCHS: 1
+CLASSES: 5
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
