@@ -2,7 +2,8 @@
 from src.bone_classifier.constants import *
 from src.bone_classifier.utils.common import read_yaml, create_directories
 from src.bone_classifier.entity import (DataIngestionConfig,
-                                        PrepareBaseModelConfig)
+                                        PrepareBaseModelConfig,
+                                        ModelTrainingConfig)
 
 
 class configurationManager:
@@ -42,6 +43,25 @@ class configurationManager:
             params_learning_rate=self.params.LEARNING_RATE
             )
         return prepare_base_model
+    
+    def get_model_training_config(self)-> ModelTrainingConfig: 
+        config=self.config.model_training
+        params=self.params
+        create_directories([config.root_dir])
+
+        model_training_config=ModelTrainingConfig(
+            root_dir=config.root_dir,
+            augumentation=params.AUGMENTATION,
+            trained_model_path=config.trined_model_path,
+            image_size=params.IMAGE_SIZE,
+            batch_size=params.BATCH_SIZE,
+            epoch=params.EPOCHS,
+            train_data_path=config.train_data_path,
+            valid_data_path=config.valid_data_path,
+            final_model_path=config.final_model_path
+
+        )
+        return model_training_config
 
         
         
