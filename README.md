@@ -36,3 +36,8 @@ python script.py
 - export MLFLOW_TRACKING_URI=https://dagshub.com/Abhikkumar619/BoneFracture_classification.mlflow
 - export MLFLOW_TRACKING_USERNAME=Abhikkumar619 
 - export MLFLOW_TRACKING_PASSWORD=b515b18fe70cac23bd1c8591a7c54e188845b00c
+
+
+# DVC commmad
+- dvc init 
+- dvc repr

@@ -1,0 +1,57 @@
+# data version control - for tracking pipeline.
+
+stages: 
+  data_ingestion: 
+    cmd: python src/bone_classifier/pipeline/stage_01_dataingestion.py
+    deps: 
+      - src/bone_classifier/pipeline/stage_01_dataingestion.py
+      - config/config.yaml
+    outs: 
+      - artifacts/dataingestion/BONE
+
+  prepare_base_model: 
+    cmd: python src/bone_classifier/pipeline/stage_02_prepare_base_model.py
+    deps: 
+      - src/bone_classifier/pipeline/stage_02_prepare_base_model.py
+      - config/config.yaml
+    params: 
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - CLASSES
+      - WEIGHTS
+      - LEARNING_RATE
+    outs: 
+      - artifacts/prepare_base_model
+  
+  model_training: 
+    cmd: python src/bone_classifier/pipeline/stage_03_model_training.py
+    deps: 
+      - src/bone_classifier/pipeline/stage_03_model_training.py
+      - config/config.yaml
+      - artifacts/dataingestion/BONE
+      - artifacts/prepare_base_model
+    params: 
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+    outs: 
+      - artifacts/training/best_model.h5
+  
+
+  model_evaluation: 
+    cmd: python src/bone_classifier/pipeline/stage_04_model_evaluation.py
+
+    deps: 
+      - src/bone_classifier/pipeline/stage_04_model_evaluation.py
+      - config/config.yaml
+      - artifacts/dataingestion/BONE
+      - artifacts/training/best_model.h5
+
+    params: 
+      - IMAGE_SIZE
+      - BATCH_SIZE
+
+    metrics: 
+    - scores.json: 
+        cache: false

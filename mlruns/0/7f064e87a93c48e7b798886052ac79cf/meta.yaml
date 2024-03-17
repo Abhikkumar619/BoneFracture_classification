@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abishekkumaryadav/DataScience/computer_vision/BoneFracture_classification/mlruns/0/7f064e87a93c48e7b798886052ac79cf/artifacts
+end_time: 1710668940074
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f064e87a93c48e7b798886052ac79cf
+run_name: smiling-cod-603
+run_uuid: 7f064e87a93c48e7b798886052ac79cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710668926995
+status: 3
+tags: []
+user_id: abishekkumaryadav
