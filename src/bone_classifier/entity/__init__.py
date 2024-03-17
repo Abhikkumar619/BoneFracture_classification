@@ -33,4 +33,17 @@ class ModelTrainingConfig:
     valid_data_path: Path
     final_model_path: Path
 
+
+@dataclass(frozen=True)
+class EvaluationConfig: 
+    path_of_model: Path
+    training_data: Path
+    all_parmas: dict
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int
+    train_data_path: Path
+    valid_data_path: Path
+    
+
     

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/abishekkumaryadav/DataScience/computer_vision/BoneFracture_classification/mlruns/0/b8e3f07461a94f99847c6227df011b21/artifacts
+end_time: 1710659087388
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b8e3f07461a94f99847c6227df011b21
+run_name: big-moose-257
+run_uuid: b8e3f07461a94f99847c6227df011b21
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710659073831
+status: 3
+tags: []
+user_id: abishekkumaryadav

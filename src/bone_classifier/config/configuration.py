@@ -3,7 +3,8 @@ from src.bone_classifier.constants import *
 from src.bone_classifier.utils.common import read_yaml, create_directories
 from src.bone_classifier.entity import (DataIngestionConfig,
                                         PrepareBaseModelConfig,
-                                        ModelTrainingConfig)
+                                        ModelTrainingConfig,
+                                        EvaluationConfig)
 
 
 class configurationManager:
@@ -63,7 +64,22 @@ class configurationManager:
         )
         return model_training_config
 
-        
+    def get_evaluation_config(self)-> EvaluationConfig: 
+            config=self.config.model_evaluation
+            params=self.params
+
+            get_model_evaluation=EvaluationConfig(
+                path_of_model=config.path_of_model,
+                training_data=config.training_data,
+                mlflow_uri="https://dagshub.com/Abhikkumar619/BoneFracture_classification.mlflow",
+                all_parmas=params,
+                params_batch_size=params.BATCH_SIZE,
+                params_image_size=params.IMAGE_SIZE,
+                train_data_path=config.train_data_path,
+                valid_data_path=config.valid_data_path
+                )
+            return get_model_evaluation
+            
         
 
         

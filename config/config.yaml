@@ -20,4 +20,12 @@ model_training:
   valid_data_path: artifacts/dataingestion/BONE/Validation
 
 
+model_evaluation: 
+  path_of_model: artifacts/training/best_model.h5
+  training_data: artifacts/dataingestion/BONE/Train
+  train_data_path: artifacts/dataingestion/BONE/Train
+  valid_data_path: artifacts/dataingestion/BONE/Validation
+
+
+
 
