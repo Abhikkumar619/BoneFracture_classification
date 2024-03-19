@@ -38,6 +38,8 @@ python script.py
 - export MLFLOW_TRACKING_PASSWORD=b515b18fe70cac23bd1c8591a7c54e188845b00c
 
 
-# DVC commmad
+# DVC commmad (data version control)
 - dvc init 
 - dvc repr
+- dvc dag (to see graph of dvc pipeline.)
+
