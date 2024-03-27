@@ -1,8 +1,7 @@
 # BoneFracture_classification
 
 ## User_interface
-
-![Sample Image](https://github.com/Abhikkumar619/BoneFracture_classification/blob/main/image.jpg)
+![Sample Image](https://github.com/Abhikkumar619/BoneFracture_classification/blob/main/Screenshot%202024-03-27%20at%203.28.03%E2%80%AFPM.png)
 
 
 ## x_ray image.
