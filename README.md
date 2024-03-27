@@ -1,5 +1,8 @@
 # BoneFracture_classification
 
+![Sample Image](https://github.com/Abhikkumar619/BoneFracture_classification/blob/main/image.jpg)
+
+
 
 ## Workflow
 1. update config.yaml
